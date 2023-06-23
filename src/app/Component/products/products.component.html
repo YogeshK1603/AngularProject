@@ -1,0 +1,21 @@
+<div class="colorlib-product">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 text-center featured" *ngFor="let data of result">
+        <div>
+        <a routerLink="/product-details/{{data.id}}">
+            <img src="{{ data.avatar }}" style="height :250px" />
+          </a>
+          <div class="desc">
+            <h2>
+              <a href="#">{{data.name}}</a>
+            </h2>
+            <h2>
+              <span class="MRP">{{ data.Mrp | currency :'INR' }}</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+td{
+  float:right;
+}
+
+li{
+  float: inline-end;
+  font-style: oblique;
+
+}

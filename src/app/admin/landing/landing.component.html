@@ -1,0 +1,23 @@
+
+
+
+<div class="container">
+  <button class="btn btn-danger me-5 mt-2"(click)="logout()" >LOGOUT</button>
+  <!-- <td><button class="btn btn-outline-danger" routerLink="/admin/add-products/{{data.id}}">Edit</button> -->
+  <div class="row">
+    <div class="col-lg-2">
+      <ul class="list-unstyled mt-5">
+        <li class="p-2" routerLink="/admin/dashboard">Dashboard</li>
+        <li class="p-2" routerLink="/admin/products">Products</li>
+        <li class="p-2" routerLink="/admin/add-products">Add Products</li>
+        <li class="p-2" routerLink="/admin/orders">Order</li>
+      </ul>
+
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+
+</div>

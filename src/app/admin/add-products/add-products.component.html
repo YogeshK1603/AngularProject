@@ -1,0 +1,33 @@
+
+<div class="contaner">
+  <form [formGroup]="prodata" (ngSubmit)="click(prodata.value)">
+    Product Name: <span class="text-danger" *ngIf="prodata.controls.name.touched && prodata.controls.name.invalid ">Enter product name</span>
+    <input class="form-control" type="text" formControlName="name">
+    <br>
+    Description: <span class="text-danger" *ngIf="prodata.controls.Description.touched && prodata.controls.Description.invalid ">
+      Enter Description
+    </span>
+    <textarea  class="form-control" type="text" formControlName="Description"></textarea>
+    <br>
+    MRP: <span class="text-danger" *ngIf="prodata.controls.MRP.touched && prodata.controls.MRP.invalid ">Enter MRP</span>
+    <input  class="form-control" type="text" formControlName="MRP">
+    <br>
+    Price: <span class="text-danger" *ngIf="prodata.controls.Price.touched && prodata.controls.Price.value > prodata.controls.MRP.value ">Price must be greter than MRP  </span>
+    <input  class="form-control" type="text" formControlName="Price">
+    <br>
+    Image: <span class="text-danger" *ngIf="prodata.controls.Image.touched && prodata.controls.Image.invalid ">Enter Image</span>
+    <input  class="form-control" type="text" formControlName="Image">
+    <br>
+    Is Active:
+    <input type="checkbox" formControlName="Isactive">
+    <br>
+    category:
+    <br>
+    <input type="radio" formControlName="category" value="women">Women
+     <br>
+    <input type="radio" formControlName="category" value="men">men
+    <br>
+    <button type="submit" class="btn btn-primary" [disabled]="!prodata.valid || prodata.controls.Price.value > prodata.controls.MRP.value">save</button>
+
+  </form>
+</div>
